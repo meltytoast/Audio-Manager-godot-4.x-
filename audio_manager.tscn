@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://4q705dok33cj"]
+
+[ext_resource type="Script" path="res://SCRIPTS/audio_manager.gd" id="1_bft0q"]
+[ext_resource type="AudioStream" uid="uid://bv1mqcun01xg7" path="res://ASSETS/AUDIO/waves_outer.mp3" id="2_3wu06"]
+[ext_resource type="AudioStream" uid="uid://cxxokl4muus71" path="res://ASSETS/AUDIO/rain_int.mp3" id="2_lmkha"]
+
+[node name="AUDIO" type="Node"]
+script = ExtResource("1_bft0q")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="cup_SFX" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="A_accept" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="B_cancel" type="AudioStreamPlayer" parent="SFX"]
+
+[node name="BGM" type="Node" parent="."]
+
+[node name="rain_bg" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("2_lmkha")
+volume_db = -8.748
+parameters/looping = false
+
+[node name="waves_bg" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("2_3wu06")
+parameters/looping = false
+
+[node name="BGM_menu" type="AudioStreamPlayer" parent="BGM"]
+
+[node name="BGM_cafe" type="AudioStreamPlayer" parent="BGM"]
